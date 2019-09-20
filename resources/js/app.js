@@ -26,11 +26,8 @@ Vue.component('feedback-form', {
                 .post(this.endpoint, formData)
                 .then(response => {
                     if (response.data.status === 'error') {
-                        this.errorMessage = response.data.errors.join(',<br>');
+                        this.showError(response.data.errors.join(',<br>'));
 
-                        this.isError = true;
-
-                        setTimeout(() => (this.isError = false), 5000);
                     } else {
                         this.resetFrom();
 
@@ -44,17 +41,20 @@ Vue.component('feedback-form', {
 
                     console.log(error.response.data.error);
 
-                    this.errorMessage = 'Ошибка отправки формы!';
-
-                    this.isError = true;
-
-                    setTimeout(() => (this.isError = false), 5000);
+                    this.showError('Ошибка отправки формы!');
                 });
         },
         resetFrom() {
             this.form.name = '';
             this.form.phone = '';
             this.form.content = '';
+        },
+        showError(errorMessage){
+            this.errorMessage = errorMessage;
+
+            this.isError = true;
+
+            setTimeout(() => (this.isError = false), 5000);
         }
     },
     template: '<form action="/" method="POST">\n' +
