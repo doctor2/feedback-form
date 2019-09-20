@@ -25,16 +25,14 @@ Vue.component('feedback-form', {
             axios
                 .post(this.endpoint, formData)
                 .then(response => {
-                    if (response.data.status === 'error') {
-                        this.showError(response.data.errors.join(',<br>'));
-
-                    } else {
+                    if (response.data.status === 'ok') {
                         this.resetFrom();
 
                         this.isSuccessed = true;
 
                         setTimeout(() => (this.isSuccessed = false), 5000);
-
+                    } else {
+                        this.showError(response.data.errors.join(',<br>'));
                     }
                 })
                 .catch(error => {
