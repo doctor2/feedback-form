@@ -62,7 +62,7 @@ class Route
     public static function errorPage404()
     {
         $view = new View();
-        $view->generate('ошибка', 'error404.php');
+        $view->generate('HTTP/1.1 404 Not Found', 'error404.php');
         exit();
     }
 }
