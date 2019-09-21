@@ -31,7 +31,7 @@ class Database
 
     public function connectDb()
     {
-        $link = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE) or die("Error: " . mysql_error($link));
+        $link = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT) or die("Error: " . mysql_error($link));
         if (!mysqli_set_charset($link, "utf8")) {
             printf("Error: " . mysql_error($link));
         }
