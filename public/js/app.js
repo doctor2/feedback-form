@@ -1889,7 +1889,7 @@ __webpack_require__.r(__webpack_exports__);
         formData.set(field, this.form[field]);
       }
 
-      axios.post(this.endpoint, formData).then(function (response) {
+      this.$axios.post(this.endpoint, formData).then(function (response) {
         if (response.data.status === 'ok') {
           _this.resetFrom();
 
@@ -29317,19 +29317,30 @@ module.exports = g;
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.$ = window.jquery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-window.Inputmask = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/index.js");
-Vue.component('feedback-form', __webpack_require__(/*! ./components/FeedbackForm.vue */ "./resources/js/components/FeedbackForm.vue")["default"]);
-var app = new Vue({
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/index.js");
+/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('feedback-form', __webpack_require__(/*! ./components/FeedbackForm.vue */ "./resources/js/components/FeedbackForm.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.$axios = axios__WEBPACK_IMPORTED_MODULE_1___default.a;
+var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app'
 });
 window.addEventListener('load', function () {
-  Inputmask("+9(999) 999-9999").mask($('#phone'));
+  inputmask__WEBPACK_IMPORTED_MODULE_3___default()("+9(999) 999-9999").mask(jquery__WEBPACK_IMPORTED_MODULE_2___default()('#phone'));
 });
 
 /***/ }),

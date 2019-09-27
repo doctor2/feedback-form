@@ -1,10 +1,11 @@
 
-window.Vue = require('vue');
-window.axios = require('axios');
-window.$ = window.jquery = require('jquery');
-window.Inputmask = require('inputmask');
+import Vue from 'vue';
+import axios from 'axios'
+import $ from 'jquery';
+import Inputmask from 'inputmask';
 
 Vue.component('feedback-form', require('./components/FeedbackForm.vue').default);
+Vue.prototype.$axios = axios;
 
 const app = new Vue({
     el: '#app',

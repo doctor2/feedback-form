@@ -48,7 +48,7 @@
                     formData.set(field, this.form[field]);
                 }
 
-                axios
+                this.$axios
                     .post(this.endpoint, formData)
                     .then(response => {
                         if (response.data.status === 'ok') {
