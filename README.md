@@ -1,6 +1,6 @@
 # Feedback-form
 
-## Установка проэкта
+## Установка проекта
 ```
 composer install
 
