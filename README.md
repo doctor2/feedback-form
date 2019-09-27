@@ -4,6 +4,9 @@
 ```
 composer install
 
+(npm install
+
+npm run dev)
 ```
 ## Создание базы
 ```
