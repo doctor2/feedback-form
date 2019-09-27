@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS feedbacks (id INT AUTO_INCREMENT PRIMARY KEY, name VA
 
 ### Описание
 ```
-В файле /settings.php настройки для соединения с базой данных и константа  FEEDBACK_FORM_STORAGE_FORMAT меняющая место хранения формы.
+В файле /settings.php настройки для соединения с базой данных и константа  FEEDBACK_FORM_STORAGE_FORMAT меняющая место хранения данных формы.
 Фабрика находится в /services/factory/
 Обработчик формы /controllers/FeedbackFormController.php
 Форма создается из /resources/js/app.js на странице /views/feedback/index.php

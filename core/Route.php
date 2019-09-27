@@ -15,9 +15,9 @@ class Route
         $url = trim($_SERVER['REQUEST_URI']);
 
         if ($url === '/' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-            $actionName = 'create';
+            $actionName = 'store';
         }elseif ($url === '/') {
-            $actionName = 'index';
+            $actionName = 'create';
         }
 
         $params['url'] = $url;

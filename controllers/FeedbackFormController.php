@@ -14,12 +14,12 @@ class FeedbackFormController extends Controller
         parent::__construct();
     }
 
-    public function index()
+    public function create()
     {
         $this->view->generate('Форма обратной связи', $this->path . 'index.php');
     }
 
-    public function create()
+    public function store()
     {
         $storage = (new StorageFactory())->getStorage(FEEDBACK_FORM_STORAGE_FORMAT);
 
